@@ -1,0 +1,153 @@
+/* Estilos generales */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0a0a24, #1a1a40);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  animation: fondoAnim 10s ease-in-out infinite alternate;
+}
+
+@keyframes fondoAnim {
+  0% { background: linear-gradient(180deg, #0a0a24, #1a1a40); }
+  100% { background: linear-gradient(180deg, #1b1b3a, #2b2b6b); }
+}
+
+/* Encabezado */
+.hero {
+  text-align: center;
+  padding: 40px 10px;
+  background: linear-gradient(90deg, #2339a1, #8b00ff);
+  color: #fff;
+  animation: entrada 1s ease-out;
+  box-shadow: 0 0 25px rgba(139,0,255,0.6);
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 0 15px #ffd700;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #ffd700;
+}
+
+/* Contenido */
+.content {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  animation: entradaSuave 1.5s ease;
+}
+
+h2 {
+  color: #7f9cff;
+  border-left: 5px solid #ffd700;
+  padding-left: 10px;
+}
+
+/* Listas */
+ol li {
+  margin: 10px 0;
+  list-style: none;
+  position: relative;
+  padding-left: 25px;
+}
+ol li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  animation: brillo 2s infinite;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  animation: aparecer 2s ease;
+}
+
+td {
+  border: 1px solid #555;
+  padding: 10px;
+  background: rgba(255,255,255,0.07);
+}
+
+tr:hover td {
+  background: rgba(124, 58, 237, 0.2);
+  transition: 0.4s;
+}
+
+/* Galería */
+.galeria h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.imagenes img {
+  width: 50%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #8b00ff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  animation: zoomIn 1s ease forwards;
+  transition: all 0.5s ease;
+}
+
+.imagenes img:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 0 15px #ffd700;
+  border-color: #ffd700;
+  filter: brightness(1.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  background: #111;
+  color: #ccc;
+}
+
+/* Animaciones */
+@keyframes entrada {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes entradaSuave {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes aparecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes brillo {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
