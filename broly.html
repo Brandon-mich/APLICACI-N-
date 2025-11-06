@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broly</title>
+  <link rel="stylesheet" href="broly.css">
+  <a href="pagina principal.html">pagina principal</a>
+</head>
+<body>
+
+<h1>Broly</h1>
+
+<!-- Botones de pestañas -->
+<div class="tabs">
+  <button class="tab-button active" data-tab="historia">Historia</button>
+  <button class="tab-button" data-tab="habilidades">Habilidades</button>
+  <button class="tab-button" data-tab="tabla">Tabla</button>
+  <button class="tab-button" data-tab="galeria">Galería</button>
+</div>
+
+<!-- Contenido de pestañas -->
+<div class="tab-content active" id="historia">
+  <p>Broly es un saiyajin de élite con un poder extraordinario que fue
+     exiliado por el Rey Vegeta por miedo a su potencial, quien temía que
+     superara a su propio hijo, el Príncipe Vegeta. Creció en el planeta
+     Vampa bajo la tutela de su padre, Paragus, quien usaba un dispositivo
+     de control para someterlo debido a su furia incontrolable. Rescatado
+     por los soldados de Freezer, Paragus lo manipuló para buscar venganza 
+     contra Vegeta, lo que llevó a un enfrentamiento donde Broly desata todo
+     su poder.
+  </p>
+</div>
+
+<div class="tab-content" id="habilidades">
+  <ul>
+    <li>Poder saiyajin legendario: Broly tiene un poder innato de saiyajin que crece con la furia. Esta habilidad le permite acceder a una fuerza en constante expansión, que aumenta drásticamente en sus transformaciones.</li>
+    <li>Estilo de lucha primal: Su estilo no se basa en golpes rápidos, sino en una lucha más salvaje que emplea agarres, pisotones, y ataques de fuerza bruta. A pesar de ser menos técnico, es ágil y capaz de esquivar ataques.</li>
+    <li>Crecimiento de poder: Su poder no es estático; a medida que pelea, su fuerza aumenta, lo que se refleja en su capacidad para superar oponentes poderosos como Golden Freezer y, en un momento dado, incluso a Goku y Vegeta Super Saiyajin Blue.</li>
+  </ul>
+</div>
+
+<div class="tab-content" id="tabla">
+  <table>
+    <tr>
+      <th>Poderes</th>
+      <th>Rasgos únicos</th>
+    </tr>
+    <tr>
+      <td>Ki colosal: Posee un nivel de energía extraordinariamente alto, que crece sin límite durante el combate.</td>
+      <td>Instinto salvaje: Pelea de forma instintiva, sin técnica formal.</td>
+    </tr>
+    <tr>
+      <td>Transformación en Super Saiyan (Ira / Legendario): Su versión especial del Super Saiyan, con cabello verde y energía inmensa; más estable que el Super Saiyan normal.</td>
+      <td>Control parcial del ki: Inicialmente no controla su poder, pero aprende a hacerlo durante la película.</td>
+    </tr>
+    <tr>
+      <td>Resistencia y durabilidad extremas: Soporta ataques devastadores sin apenas daño.</td>
+      <td>Vínculo emocional con el Saiyanismo: Su furia proviene de su naturaleza Saiyan pura y su instinto de lucha.</td>
+    </tr>
+    <tr>
+      <td>Aumento ilimitado de poder: Su poder no tiene un límite visible; cuanto más lucha, más fuerte se vuelve.</td>
+      <td>Resistencia mental: A pesar de su furia, muestra capacidad de adaptarse emocionalmente.</td>
+    </tr>
+  </table>
+</div>
+
+<div class="tab-content gallery" id="galeria">
+  <img src="https://codigoespagueti.com/wp-content/uploads/2020/12/Broly.jpg" width="300" height="300">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2MtZIO1hv6p9QquyoCss3PAcl0hlfKjj8Uw&s" width="300" height="300">
+  <img src="https://depor.com/resizer/v2/CU46M2NESJA5DJZ2GDEYHM4ERQ.jpg?auth=547c8cab6d497816cff61ceadaae8ec586d462bb5e7f6169471477380a565efa&width=1200&height=900&quality=90&smart=true" width="300" height="300">
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-button');
+  const contents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      contents.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
