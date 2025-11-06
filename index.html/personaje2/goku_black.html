@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOKU BLACK — Ficha Animada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="goku_black.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">GOKU <span>BLACK</span></div>
+    <nav class="top-nav" aria-label="Navegación principal">
+      <a href="#intro">Intro</a>
+      <a href="#ficha">Ficha</a>
+      <a href="#poderes">Poderes</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </header>
+
+  <aside class="side-markers" aria-hidden="false">
+    <a href="#intro" class="marker">01<span>Intro</span></a>
+    <a href="#ficha" class="marker">02<span>Ficha</span></a>
+    <a href="#poderes" class="marker">03<span>Poderes</span></a>
+    <a href="#galeria" class="marker">04<span>Galería</span></a>
+  </aside>
+
+  <main class="container">
+    <section id="intro" class="card reveal">
+      <h1>GOKU BLACK</h1>
+      <p class="lead">Goku Black es un personaje ficticio de la serie de manga y anime <em>Dragon Ball Super</em>. Aparece por primera vez en el arco de Trunks del Futuro Alternativo y rápidamente se convierte en uno de los villanos más enigmáticos y poderosos.</p>
+      <p>Es una versión malvada de Goku cuyo verdadero nombre es <strong>Zamasu</strong>. Cruel, despiadado y convencido de su justicia divina, busca eliminar a la humanidad.</p>
+    </section>
+
+    <section id="ficha" class="card reveal">
+      <h2>Ficha</h2>
+      <ol class="fancy-list">
+        <li><strong>Nombre:</strong> Goku Black</li>
+        <li><strong>Nombre real:</strong> Zamasu</li>
+        <li><strong>Línea temporal:</strong> Presente inalterado / Futuro alternativo</li>
+        <li><strong>Poderes:</strong> Velocidad, fuerza, teletransportación, creación y destrucción</li>
+        <li><strong>Plan:</strong> Cero Humanos — exterminar a los mortales</li>
+      </ol>
+    </section>
+
+    <section id="poderes" class="card reveal">
+      <h2>Poderes</h2>
+      <div class="table-wrap">
+        <table class="poderes-table">
+          <tr>
+            <th>Habilidad</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <td>Absorber poderes</td>
+            <td>Puede absorber los poderes de oponentes después de la batalla e incorporarlos.</td>
+          </tr>
+          <tr>
+            <td>Estilo de lucha</td>
+            <td>Emula y ajusta movimientos para reflejar el estilo saiyano.</td>
+          </tr>
+          <tr>
+            <td>Poder en aumento</td>
+            <td>Su poder crece tras cada enfrentamiento; superó a Vegeta SSB sin transformarse.</td>
+          </tr>
+          <tr>
+            <td>Poder saiyano mejorado</td>
+            <td>Recuperación rápida y capacidad para alcanzar el Super Saiyajin Rosado.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="galeria" class="card reveal">
+      <h2>Galería</h2>
+      <div class="gallery">
+        <figure>
+          <img src="https://www.somosxbox.com/wp-content/uploads/2018/01/black_goku_super_saiyan_rose_by_rmehedi-dajac7z.jpg" alt="Goku Black 1">
+        </figure>
+        <figure>
+          <img src="https://dragonball.guru/wp-content/uploads/2021/04/Gouk-Black-Super-Saiyan-Rose-415x415.jpg" alt="Goku Black 2">
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <small>Diseño animado • Hecho con CSS • Copia y personaliza</small>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('in-view');
+      });
+    }, {threshold:0.15});
+    document.querySelectorAll('.reveal').forEach(s=>observer.observe(s));
+  </script>
+</body>
+</html>
+
